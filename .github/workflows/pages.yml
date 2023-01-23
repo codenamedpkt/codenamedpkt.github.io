@@ -1,10 +1,13 @@
+---
 # Workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Runs on pushes targeting the default branch
   push:
   workflow_dispatch:
-    branches: $default_branch
+  schedule:
+    - cron: '*/1 * * * *'
+      branches: $default_branch
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
