@@ -51,16 +51,22 @@ defaults:
 # Set page.lang for all files under respective languages and ensure index.html is added for directories
   -
     scope:
-      path: "en"
+      path: "en_gb"
     values:
-      lang: en
+      lang: en-gb
       permalink: /:path/:basename:output_ext
 
-  -
+-
     scope:
-      path: "cn"
+      path: "zh_cn"
     values:
-      lang: cn
+      lang: zh-cn
+      permalink: /:path/:basename:output_ext
+-
+    scope:
+      path: "zh_hk"
+    values:
+      lang: zh-hk
       permalink: /:path/:basename:output_ext
 
 # Exclude from processing.
